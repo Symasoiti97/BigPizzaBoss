@@ -17,20 +17,21 @@ namespace BigPizzaBoss.Pizzeria
 
         public AllTheIgredients()
         {
-            MetodSetIngr();
+            MetodSetIngrAndPizzas();
         }
 
-        public void MetodSetIngr()
+        private void MetodSetIngrAndPizzas()
         {
             Assembly asm = Assembly.LoadFrom("BigPizzaBoss.exe");
-            Type baseClass = typeof(Ingredient);
+            Type baseClassIngredient = typeof(Ingredient);
 
             foreach (Type t in asm.GetTypes())
             {
-                if (t.IsSubclassOf(baseClass))
+
+                if (t.IsSubclassOf(baseClassIngredient))
                 {
                     listAllIngr.Add(t.GetField("name", BindingFlags.NonPublic | BindingFlags.Static).GetValue(t).ToString());
-                    constructorInfos.Add(t.GetConstructor(new Type[] { baseClass }));
+                    constructorInfos.Add(t.GetConstructor(new Type[] { baseClassIngredient }));
                 }
             }
         }

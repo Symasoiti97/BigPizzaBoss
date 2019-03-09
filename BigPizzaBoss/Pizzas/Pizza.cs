@@ -16,11 +16,11 @@ namespace BigPizzaBoss.Pizzas
             
         }
 
-        public abstract List<string> getListIngredients();
+        public abstract List<string> GetListIngredients();
 
-        public abstract double getPrice();
+        public abstract double GetPrice();
 
-        public abstract string getName();
+        public abstract string GetName();
 
         public static void Check(List<Pizza> pizzas)
         {
@@ -29,8 +29,8 @@ namespace BigPizzaBoss.Pizzas
 
             foreach (Pizza pizza in pizzas)
             {
-                Console.WriteLine($"{pizza.getName()} Цена: " + pizza.getPrice());
-                sumPrice += pizza.getPrice();
+                Console.WriteLine($"{pizza.GetName()} Цена: " + pizza.GetPrice());
+                sumPrice += pizza.GetPrice();
                 //foreach (var list in getListIngredients())
                 //{
                 //    Console.WriteLine(list);

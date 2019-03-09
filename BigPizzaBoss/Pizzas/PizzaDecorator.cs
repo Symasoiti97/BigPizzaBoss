@@ -15,6 +15,5 @@ namespace BigPizzaBoss.Pizzas
         {
             this.pizza = pizza;
         }
-        
     }
 }

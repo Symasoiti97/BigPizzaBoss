@@ -8,31 +8,36 @@ namespace BigPizzaBoss.Ingredients
 {
     abstract class Ingredient : PizzaDecorator
     {
-        protected string nameIgredient;
+        protected string nameIngredient;
         protected double price;
 
-        public Ingredient(Pizza pizza, string nameIgredient, double price) : base(pizza)
+        public Ingredient(Pizza pizza, string nameIngredient, double price) : base(pizza)
         {
-            this.nameIgredient = nameIgredient;
+            this.nameIngredient = nameIngredient;
             this.price = price;
         }
 
-        public override List<string> getListIngredients()
+        public Ingredient(Pizza pizza, string nameIngredient) : base(pizza)
         {
-            listIngredients.AddRange(pizza.getListIngredients());
-            listIngredients.Add(nameIgredient);
+            this.nameIngredient = nameIngredient;
+        }
+
+        public override List<string> GetListIngredients()
+        {
+            listIngredients.AddRange(pizza.GetListIngredients());
+            listIngredients.Add(nameIngredient);
             
             return listIngredients;
         }
 
-        public override double getPrice()
+        public override double GetPrice()
         {
-            return pizza.getPrice() + price;
+            return pizza.GetPrice() + price;
         }
 
-        public override string getName()
+        public override string GetName()
         {
-            return pizza.getName();
+            return pizza.GetName();
         }
     }
 }

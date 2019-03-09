@@ -9,27 +9,26 @@ namespace BigPizzaBoss.Pizzas
     class PizzaNeapolitano : Pizza
     {
         private const string name = "Пицца Неаполитана";
-
-        private List<string> listIng = new List<string> { "Корж", "Перец" };
+        private const double price = 50;
 
         public PizzaNeapolitano() : base()
         {
 
         }
 
-        public override string getName()
+        public override string GetName()
         {
             return name;
         }
 
-        public override List<string> getListIngredients()
+        public override List<string> GetListIngredients()
         {
-            return listIng;
+            return listIngredients;
         }
 
-        public override double getPrice()
+        public override double GetPrice()
         {
-            return 50;
+            return price;
         }
     }
 }

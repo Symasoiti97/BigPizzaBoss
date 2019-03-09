@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using BigPizzaBoss.Ingredients;
 
 namespace BigPizzaBoss.Pizzas
 {
-    class PizzaPepperoni : Pizza
+    class PizzaMargarita : Pizza
     {
-        private const string name = "Пицца Пепперони";
-        private const double price = 70;
+        private const string name = "Пицца Маргарита";
+        private const double price = 60;
 
-        public PizzaPepperoni() : base()
+        public PizzaMargarita() : base()
         {
 
         }

@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using BigPizzaBoss.Pizzas;
 
 namespace BigPizzaBoss.Ingredients
 {
-    class Tomato : Ingredient
+    class Ham : Ingredient
     {
-        private const string name = "томат";
-   
-        public Tomato(Pizza pizza) :base(pizza, name)
+        private const string name = "ветчина";
+
+        public Ham(Pizza pizza) : base(pizza, name)
         {
 
         }
+
     }
 }
